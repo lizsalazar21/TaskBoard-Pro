@@ -1,10 +1,15 @@
 import { useState } from "react"
 import { TaskForm } from "./TaskForm"
 import { TaskList } from "./TaskList"
+import { TASK_UI_TEXT } from "../constants/task-ui.constants"
+import { HTML_TAGS } from "../../../shared/constants/html-tags.constants"
 
 export function TaskBoard() {
   const [taskText, setTaskText] = useState("")
   const [tasks, setTasks] = useState([])
+  const SectionTag = HTML_TAGS.SECTION
+  const TitleTag = HTML_TAGS.H2
+
 
   // si se necesita modificar el estado de un hijo, se debe craer una función en el padre y pasarle como prop al hijo
   const handleTaskTextChange = (event) => {
@@ -22,13 +27,13 @@ export function TaskBoard() {
       completed: false,
     }
 
-    setTasks([...tasks, newTask])
+    setTasks([...tasks, newTask]) 
     setTaskText("")
   }
 
   return (
-    <section>
-      <h2>Gestión de tareas</h2>
+    <SectionTag>
+      <TitleTag>{TASK_UI_TEXT.BOARD_TITLE}</TitleTag>
 
       <TaskForm
         taskText={taskText}
@@ -37,6 +42,6 @@ export function TaskBoard() {
       />
 
       <TaskList tasks={tasks} />
-    </section>
+    </SectionTag>
   )
 }
