@@ -1,0 +1,16 @@
+export const TASK_UI_TEXT = {
+  BOARD_TITLE: "Gestión de tareas",
+  FORM_TITLE: "Agregar tarea",
+  FORM_LABEL: "Título de la tarea",
+  LIST_TITLE: "Lista de tareas",
+  INPUT_PLACEHOLDER: "Escriba una tarea",
+  ADD_BUTTON: "Agregar",
+  DELETE_BUTTON: "Eliminar",
+  TOGGLE_BUTTON: "Completar",
+  EMPTY_MESSAGE: "No hay tareas registradas",
+  STATUS_COMPLETED: "Completada",
+  STATUS_PENDING: "Pendiente",
+  FILTER_ALL: "Todas",
+  FILTER_PENDING: "Pendientes",
+  FILTER_COMPLETED: "Completadas",
+}
