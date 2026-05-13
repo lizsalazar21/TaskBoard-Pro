@@ -7,6 +7,7 @@ export function taskReducer(state, action) {
 
     case TASK_ACTION_TYPES.DELETE_TASK:
       return state.filter((task) => task.id !== action.payload)
+      
     case TASK_ACTION_TYPES.TOGGLE_TASK:
       return state.map((task) =>
         task.id === action.payload
